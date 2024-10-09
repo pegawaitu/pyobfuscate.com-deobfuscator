@@ -1,3 +1,20 @@
+note: 
+if found error on deobfuscatorv2.py
+UnicodeEncodeError: 'charmap' codec can't encode characters
+goes to line 64 change:
+
+with open(fname, "w") as f:
+    f.write(html)
+
+to
+
+with open(fname, "w", encoding="utf-8") as f:
+    f.write(html)
+
+source: https://stackoverflow.com/a/42495690
+
+
+
 ### Pyobfuscate.com deobfuscator
 - the first open source pyobfuscate.com deobfuscator
 
